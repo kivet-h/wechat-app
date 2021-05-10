@@ -2,7 +2,7 @@
  * @Description: git-commit 配置
  * @Author: kivet
  * @Date: 2021-05-10 13:55:27
- * @LastEditTime: 2021-05-10 13:57:18
+ * @LastEditTime: 2021-05-10 14:33:26
  */
 
 const types = [
@@ -29,6 +29,7 @@ const typeEnum = {
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
+  parserPreset: 'conventional-changelog-conventionalcommits',
   rules: {
     'type-case': [0],
     'type-empty': [0],

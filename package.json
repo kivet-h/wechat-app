@@ -28,7 +28,8 @@
     "start:rn": "npm run build:rn -- --watch",
     "start:qq": "npm run build:qq -- --watch",
     "start:jd": "npm run build:jd -- --watch",
-    "start:quickapp": "npm run build:quickapp -- --watch"
+    "start:quickapp": "npm run build:quickapp -- --watch",
+    "lint-staged": "lint-staged"
   },
   "husky": {
     "hooks": {

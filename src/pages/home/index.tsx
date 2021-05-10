@@ -2,9 +2,9 @@
  * @Description: 首页
  * @Author: kivet
  * @Date: 2021-05-08 14:00:33
- * @LastEditTime: 2021-05-10 11:38:39
+ * @LastEditTime: 2021-05-10 11:47:53
  */
-import { FC } from 'react'
+import { FC } from 'react';
 import { connect } from 'react-redux'
 import { View, Text } from '@tarojs/components'
 import { IGlobalState } from '@/models/globals'

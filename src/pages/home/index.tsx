@@ -5,7 +5,7 @@
  * @LastEditTime: 2021-05-10 11:47:53
  */
 import { FC } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { View, Text } from '@tarojs/components'
 import { IGlobalState } from '@/models/globals'
 import styles from './index.module.less'

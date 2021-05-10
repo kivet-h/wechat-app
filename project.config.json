@@ -40,5 +40,6 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
+  "libVersion": "2.16.1",
   "condition": {}
 }

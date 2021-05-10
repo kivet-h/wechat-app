@@ -2,7 +2,7 @@
  * @Description: prettier 配置
  * @Author: kivet
  * @Date: 2021-05-10 09:41:38
- * @LastEditTime: 2021-05-10 11:25:48
+ * @LastEditTime: 2021-05-10 15:24:44
  */
 
 module.exports = {

@@ -2,7 +2,7 @@
  * @Description: 首页
  * @Author: kivet
  * @Date: 2021-05-08 14:00:33
- * @LastEditTime: 2021-05-10 18:49:22
+ * @LastEditTime: 2021-05-11 10:04:56
  */
 import { FC, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
@@ -15,7 +15,10 @@ import styles from './index.module.less';
 interface IProps extends IGlobalState {}
 
 const Home: FC<IProps> = (props) => {
-  const [adressInfo, setArdessInfo] = useState<{ longitude?: number; latitude?: number }>({
+  const [adressInfo, setArdessInfo] = useState<{
+    longitude?: number;
+    latitude?: number;
+  }>({
     latitude: 0,
     longitude: 0,
   });
@@ -67,7 +70,10 @@ const Home: FC<IProps> = (props) => {
    * 点击标记点对应的气泡时触发，e.detail = {markerId}
    */
   const onCalloutTap = (event) => {
-    console.log('点击标记点对应的气泡时触发，e.detail = {markerId},onCalloutTap', event);
+    console.log(
+      '点击标记点对应的气泡时触发，e.detail = {markerId},onCalloutTap',
+      event,
+    );
   };
 
   /**
@@ -88,7 +94,10 @@ const Home: FC<IProps> = (props) => {
    * 点击地图poi点时触发，e.detail = {name, longitude, latitude}
    */
   const onPoiTap = (event) => {
-    console.log('点击地图poi（地图上的那些图标）点时触发，e.detail = {name, longitude, latitude},onPoiTap', event);
+    console.log(
+      '点击地图poi（地图上的那些图标）点时触发，e.detail = {name, longitude, latitude},onPoiTap',
+      event,
+    );
   };
 
   const onClickIconA = () => {

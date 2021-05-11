@@ -1,15 +1,15 @@
-import { Component } from "react";
-import { Provider } from "react-redux";
-import dva from "@/utils/dva";
-import models from "@/utils/model";
-import "./app.less";
+import { Component } from 'react';
+import { Provider } from 'react-redux';
+import dva from '@/utils/dva';
+import models from '@/utils/model';
+import './app.less';
 
 const app = dva.createApp({
   models,
   initialState: {},
   enableLog: true,
   onError(e) {
-    console.error("===appError===", e);
+    console.error('===appError===', e);
   },
 });
 

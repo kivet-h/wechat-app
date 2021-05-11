@@ -5,9 +5,9 @@
  * @LastEditTime: 2021-05-08 14:50:33
  */
 
-import { createLogger } from "redux-logger";
-import { create } from "dva-core";
-import createLoading from "dva-loading";
+import { createLogger } from 'redux-logger';
+import { create } from 'dva-core';
+import createLoading from 'dva-loading';
 
 let app;
 let store;
@@ -18,7 +18,7 @@ function createApp(options?: any) {
   const { models } = options;
 
   // 开发环境打印redux日志
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === 'development') {
     options.onAction = [createLogger()];
   }
   app = create({

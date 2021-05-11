@@ -3,7 +3,7 @@ module.exports = {
     NODE_ENV: '"development"',
   },
   defineConstants: {
-    API_BASE: JSON.stringify("ddd"),
+    API_BASE: JSON.stringify('ddd'),
   },
   mini: {},
   h5: {},

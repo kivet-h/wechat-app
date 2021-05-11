@@ -3,7 +3,7 @@ module.exports = {
     NODE_ENV: '"production"',
   },
   defineConstants: {
-    API_BASE: JSON.stringify("ppp"),
+    API_BASE: JSON.stringify('ppp'),
   },
   mini: {},
   h5: {

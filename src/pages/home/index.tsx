@@ -2,7 +2,7 @@
  * @Description: 首页
  * @Author: kivet
  * @Date: 2021-05-08 14:00:33
- * @LastEditTime: 2021-05-10 16:33:56
+ * @LastEditTime: 2021-05-11 09:07:10
  */
 import { FC } from 'react';
 import { connect } from 'react-redux';
@@ -16,7 +16,10 @@ interface IProps extends IGlobalState {}
 const Home: FC<IProps> = () => {
   return (
     <View className={styles.container}>
-      <Text>这 是一个基于技术栈：react 17 + TS 4.x + Taro 3.x + Taro UI 3.x + dva的小程序项目</Text>
+      <Text>
+        这 是一个基于技术栈：react 17 + TS 4.x + Taro 3.x + Taro UI 3.x +
+        dva的小程序项目
+      </Text>
       <Button
         onClick={() => {
           Taro.navigateTo({

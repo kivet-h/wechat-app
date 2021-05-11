@@ -2,7 +2,7 @@
  * @Description: 首页
  * @Author: kivet
  * @Date: 2021-05-08 14:00:33
- * @LastEditTime: 2021-05-11 09:07:10
+ * @LastEditTime: 2021-05-11 09:38:51
  */
 import { FC } from 'react';
 import { connect } from 'react-redux';
@@ -14,6 +14,7 @@ import styles from './index.module.less';
 interface IProps extends IGlobalState {}
 
 const Home: FC<IProps> = () => {
+  console.log('asdasd');
   return (
     <View className={styles.container}>
       <Text>

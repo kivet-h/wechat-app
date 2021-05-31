@@ -1,6 +1,6 @@
 # wechat-app
 
-## 德鲁伊 畜牧小程序-精简版
+## 微信小程序
 
 > 基于技术栈：react 17 + TS 4.x + Taro 3.x + Taro UI 3.x + dva + less
 

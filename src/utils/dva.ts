@@ -1,8 +1,8 @@
 /*
  * @Description: dva 配置
  * @Author: kivet
- * @Date: 2021-05-08 14:34:04
- * @LastEditTime: 2021-05-08 14:50:33
+ * @Date: 2021-05-11 16:06:28
+ * @LastEditTime: 2021-05-12 09:55:32
  */
 
 import { createLogger } from 'redux-logger';
@@ -19,6 +19,7 @@ function createApp(options?: any) {
 
   // 开发环境打印redux日志
   if (process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-param-reassign
     options.onAction = [createLogger()];
   }
   app = create({

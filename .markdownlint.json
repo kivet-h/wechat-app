@@ -1,0 +1,6 @@
+{
+  "markdown 文档规则配置": "文档地址：https://github.com/DavidAnson/vscode-markdownlint#configure",
+  "MD014": false,
+  "MD034": false,
+  "MD013": false
+}

@@ -18,10 +18,7 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "global.d.ts"
-    ],
+    "typeRoots": ["node_modules/@types", "global.d.ts"],
     "paths": {
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
@@ -29,12 +26,11 @@
       "@/pages/*": ["./src/pages/*"],
       "@/services/*": ["./src/services/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@/styles/*": ["./src/styles/*"],
+      "@/enum/*": ["./src/enum/*"],
+      "@/hooks/*": ["./src/hooks/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "exclude": ["node_modules", "dist"],
   "compileOnSave": false
 }

@@ -1,8 +1,15 @@
+/*
+ * @Description: 编译配置详情
+ * @Document: https://taro-docs.jd.com/taro/docs/config-detail
+ * @Author: kivet
+ * @Date: 2021-05-11 18:39:59
+ * @LastEditTime: 2021-05-31 17:37:25
+ */
 import { resolve } from 'path';
 
 const config = {
   projectName: 'wechat-app',
-  date: '2021-5-8',
+  date: '2021-5-11',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -12,7 +19,11 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
-  defineConstants: {},
+  // 用于配置一些全局变量供代码中进行使用
+  defineConstants: {
+    PAGE_NUM: 10, // 列表分页每页获取条数
+    CURRENT_TIME_ZONE: 0 - new Date().getTimezoneOffset(), // 当前时区
+  },
   copy: {
     patterns: [],
     options: {},
@@ -26,6 +37,8 @@ const config = {
     '@/services': resolve(__dirname, '..', 'src/services'),
     '@/utils': resolve(__dirname, '..', 'src/utils'),
     '@/styles': resolve(__dirname, '..', 'src/styles'),
+    '@/enum': resolve(__dirname, '..', 'src/enum'),
+    '@/hooks': resolve(__dirname, '..', 'src/hooks'),
   },
   mini: {
     postcss: {

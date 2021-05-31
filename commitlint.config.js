@@ -1,8 +1,8 @@
 /*
  * @Description: git-commit 配置
  * @Author: kivet
- * @Date: 2021-05-10 13:55:27
- * @LastEditTime: 2021-05-10 14:33:26
+ * @Date: 2021-05-11 19:32:36
+ * @LastEditTime: 2021-05-12 09:03:41
  */
 
 const types = [
@@ -27,9 +27,9 @@ const typeEnum = {
   value: () => types,
 };
 
+// eslint-disable-next-line import/no-commonjs
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  parserPreset: 'conventional-changelog-conventionalcommits',
   rules: {
     'type-case': [0],
     'type-empty': [0],

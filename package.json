@@ -2,7 +2,7 @@
   "name": "wechat-app",
   "version": "1.0.0",
   "private": true,
-  "description": "小程序 测试",
+  "description": "这是一个基于技术栈：react 17 + TS 4.x + Taro 3.x + Taro UI 3.x + dva的小程序项目",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -18,8 +18,8 @@
     "build:qq": "taro build --type qq",
     "build:jd": "taro build --type jd",
     "build:quickapp": "taro build --type quickapp",
-    "start": "cross-env NODE_ENV=production taro build --type weapp --watch",
-    "start:dev": "cross-env NODE_ENV=development taro build --type weapp --watch",
+    "start": "NODE_ENV=production taro build --type weapp --watch",
+    "start:dev": "NODE_ENV=development taro build --type weapp --watch",
     "start:weapp": "npm run build:weapp -- --watch",
     "start:swan": "npm run build:swan -- --watch",
     "start:alipay": "npm run build:alipay -- --watch",
@@ -30,7 +30,6 @@
     "start:jd": "npm run build:jd -- --watch",
     "start:quickapp": "npm run build:quickapp -- --watch",
     "lint-staged": "lint-staged",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git add . && git-cz"
   },
   "lint-staged": {
@@ -38,13 +37,14 @@
       "prettier --write"
     ],
     "*.ts?(x)": [
-      "prettier --parser=typescript --write"
+      "prettier --config .prettierrc.js --write",
+      "eslint --fix"
     ]
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
   "browserslist": [
@@ -59,13 +59,16 @@
     "@tarojs/react": "3.2.8",
     "@tarojs/runtime": "3.2.8",
     "@tarojs/taro": "3.2.8",
+    "dayjs": "^1.10.4",
     "dva-core": "^2.0.4",
     "dva-loading": "^3.0.22",
+    "js-sha256": "^0.9.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "taro-ui": "3.0.0-alpha.10"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
@@ -77,24 +80,19 @@
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-import": "^1.13.3",
     "babel-preset-taro": "3.2.8",
-    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.26.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-taro": "3.2.8",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "stylelint": "9.3.0",
     "typescript": "^4.1.0"
   },

@@ -1,9 +1,10 @@
+// eslint-disable-next-line import/no-commonjs
 module.exports = {
   env: {
-    NODE_ENV: '"production"',
+    NODE_ENV: JSON.stringify('production'),
   },
   defineConstants: {
-    API_BASE: JSON.stringify('ppp'),
+    API_BASE: JSON.stringify('https://baidu.com'), // 接口域名
   },
   mini: {},
   h5: {
